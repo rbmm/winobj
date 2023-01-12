@@ -938,8 +938,6 @@ public:
 
 class ZMainWnd : public ZSDIFrameWnd
 {
-	HWND _hwnd;
-
 	virtual PCUNICODE_STRING getPosName()
 	{
 		STATIC_UNICODE_STRING_(MainWnd);
@@ -950,11 +948,11 @@ class ZMainWnd : public ZSDIFrameWnd
 	{
 		if (MySplit* p = new MySplit(nWidth>>2))
 		{
-			_hwnd = p->Create(0, 0, WS_CHILD|WS_VISIBLE|WS_CLIPCHILDREN, x, y, nWidth, nHeight, hwnd, 0, 0);
+			_hwndView = p->Create(0, 0, WS_CHILD|WS_VISIBLE|WS_CLIPCHILDREN, x, y, nWidth, nHeight, hwnd, 0, 0);
 			p->Release();
 		}
 
-		return _hwnd != 0;
+		return _hwndView != 0;
 	}
 
 	virtual BOOL CreateSB(HWND hwnd)
@@ -995,9 +993,6 @@ class ZMainWnd : public ZSDIFrameWnd
 	{
 		switch (uMsg)
 		{
-		case WM_COMMAND:
-			SendMessage(_hwnd, WM_COMMAND, wParam, 0);
-			break;
 		case WM_NOTIFY:
 			if (AFX_IDW_STATUS_BAR == ((NMHDR*)lParam)->idFrom)
 			{
@@ -1038,11 +1033,6 @@ class ZMainWnd : public ZSDIFrameWnd
 			break;
 		}
 		return ZSDIFrameWnd::WindowProc(hwnd, uMsg, wParam, lParam);
-	}
-public:
-	ZMainWnd()
-	{
-		_hwnd = 0;
 	}
 };
 

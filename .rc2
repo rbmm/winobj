@@ -1,0 +1,40 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+1 RT_MANIFEST ".manifest"
+
+IDR_MENU1 ICON "main.ico"
+
+ID_REFRESH ICON "img/reload.ico"
+ID_TOGGLE ICON "img/swap.ico"
+ID_GRID ICON "img/Grid.ico"
+ID_COPY ICON "img/copy.ico"
+ID_SECURITY	ICON "img/security.ico"
+
+301 ICON "img/Icon_1.ico" // all
+302 ICON "img/Icon_2.ico" //directory
+303 ICON "img/Icon_3.ico" //*directory
+305 ICON "img/Icon_5.ico" //device
+306 ICON "img/Icon_6.ico" //driver
+307 ICON "img/Icon_7.ico" //section
+308 ICON "img/Icon_8.ico" //port
+309 ICON "img/Icon_9.ico" //link
+310 ICON "img/Icon_10.ico" //registry
+311 ICON "img/Icon_11.ico" //event
+312 ICON "img/Icon_12.ico" //job
+313 ICON "img/Icon_13.ico" //mutant
+314 ICON "img/Icon_14.ico" //keyedevent
+315 ICON "img/Icon_15.ico" //type
+317 ICON "img/Icon_17.ico" //windowstation
+318 ICON "img/Icon_18.ico" //callback
+319 ICON "img/Icon_19.ico" //semaphore
+320 ICON "img/Icon_20.ico" //waitableport
+321 ICON "img/Icon_21.ico" //timer
+322 ICON "img/Icon_22.ico" //session
+325 ICON "img/Icon_25.ico" //eventpair
+330 ICON "img/Icon_30.ico" //partition
+366 ICON "img/Icon_66.ico" //filter comm
+367 ICON "img/Icon_67.ico" //filter connect
+
